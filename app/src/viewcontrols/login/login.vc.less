@@ -1,0 +1,117 @@
+[plat-control="login-vc"] {
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+
+@prim: purple;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+}
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: ghostwhite;
+  font-weight: 300;
+}
+
+body ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: ghostwhite;
+  font-weight: 300;
+}
+
+.wrapper {
+	background: linear-gradient(to bottom right, deeppink 0%, purple 100%);
+	border: 10px solid fade(black, 10%);
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 100%;
+	// Tip: Modify height to change length of pink/purple wrapper//
+	height: 450px;
+	margin-top: -200px;
+	overflow: hidden;
+	
+//what happens to the form after the login button is clicked//
+	&.form-success{
+		.container{
+			h1{
+				transform: translateY(85px);
+			}
+		}
+	}
+}
+
+.container{
+	max-width: 600px;
+	margin: auto;
+	padding: 80px 0;
+	height: 400px;
+	text-align: center;
+	
+	/*Properties for "Welcome to Platypus Blog"*/
+	h1 {
+		font-size:40px;
+		transition-duration: 1s;
+		transition-timing-function: ease-in;
+		font-weight: 100;
+		color: ghostwhite;
+	}
+}
+
+form {
+	padding:20px 0;
+	position: relative;
+	z-index: 2;
+}
+	/*Properties of the inputs*/
+	#plat-input {
+		display: block;
+		-webkit-appearance: none;
+		outline: 0;
+		border: 1px solid fade(pink, 10%);
+		background-color: fade(ghostwhite, 5%);
+		width: 250px;
+		
+		color: ghostwhite;
+		
+		transition-duration: 1s;
+		font-weight: 300;
+		
+		/*Dictates the properties when mouse hovers over input button*/
+		&:hover {
+			background-color: fade(ghostwhite, 20%);
+		}
+		
+		/*Dictates the properties when mouse click the input button*/
+		&:focus {
+			background-color: fade(ghostwhite, 5%);
+			width: 300px;
+			
+			color: ghostwhite;
+		}
+	}
+	
+	#login-button {
+		outline: 0;
+		border: 10px solid fade(pink, 10%);
+		width:150px;
+		height:150px;
+		border-radius:150px;
+		margin-right: 25px;
+		font-size:20px;
+		font-weight: 100;
+		color: fade(white, 70%);
+		line-height:100px;
+		text-align:center;
+		background-color: fade(ghostwhite, 5%);
+		transition-duration: 0.25s;
+		
+		&:hover{
+			background-color: ghostwhite;
+			color: deeppink;
+		}
+	}
+}

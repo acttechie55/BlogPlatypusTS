@@ -1,4 +1,11 @@
 <!--This is the home page! This is what people sees when they first log-on-->
-<div class = "heading">
-<h1 class = "hometitle">Choose A Blog....Any Blog</h1>
+<div class="heading">
+	<h1 class="hometitle">Choose A Blog....Any Blog</h1>
+	<plat-button id="create-button" plat-tap="home()">Let's Platyi-Blog!</plat-button>
 </div>
+<plat-foreach class="blogFormat" plat-context="posts">
+	<h2>{{ title }}</h2>
+	<h3>{{ author }}</h3>
+	<h6>{{ prettyDate }}</h6>
+	<p>{{ Content }}</p>
+</plat-foreach>
