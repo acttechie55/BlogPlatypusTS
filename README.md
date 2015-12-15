@@ -71,7 +71,7 @@ The following are descriptions for a few of the useful npm scripts. All of these
 - **start**
   - Builds/bundles your src files and watches them for changes
   - Rebuilds/bundles when your src files change
-  - Starts server that serves assets from the `app` directory on http://localhost:3000
+  - Starts server that serves assets from the `app` directory on http://localhost:4000
 
 - **tsd**
   - Installs/links TypeScript declarations using [tsd](http://definitelytyped.org/tsd/)
